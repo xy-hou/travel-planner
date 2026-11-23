@@ -1,0 +1,134 @@
+
+--- SIMULATED SCENARIO STEP 1 ---
+
+============================================================================
+Travel Risk Research Agent | DEMO | Trip demo-4cf9cda9
+============================================================================
+MIA → NYC | Deadline UTC: 2026-11-20 03:51
+Risk classification: ELEVATED; State changed: True
+  Risk evidence: Weather-related concern: NYC: Synthetic winter storm warning near New York airports
+Actions:
+  • Risk state changed; initiate bounded ToT alternative planning
+  • Generated 3 validated or clearly labeled synthetic route options
+Evidence collected: 2; retrieval top results: 2
+  [SIMULATED demo feed] NYC | STORM_WARNING: Synthetic winter storm warning near New York airports | Fresh: True
+    https://example.invalid/synthetic-fixture
+  [SIMULATED demo feed] DEMO123 | FLIGHT_STATUS: Flight status: SCHEDULED (synthetic) | Fresh: True
+    https://example.invalid/synthetic-fixture
+
+Alternative itineraries (SYNTHETIC prices/times, NOT bookable):
+  1. $365.00, arrival 2026-11-18 14:51 UTC, SIMULATED_OPTION
+     MIA → PHL [flight] 11/18 07:51 → 11/18 11:21 UTC
+     PHL → NYC [rail] 11/18 12:51 → 11/18 14:51 UTC
+     Issues: SIMULATION_ONLY, WEATHER_ALERT_REVIEW
+  2. $450.00, arrival 2026-11-18 13:51 UTC, SIMULATED_OPTION
+     MIA → ATL [flight] 11/18 05:51 → 11/18 08:06 UTC
+     ATL → NYC [flight] 11/18 10:51 → 11/18 13:51 UTC
+     Issues: SIMULATION_ONLY, WEATHER_ALERT_REVIEW
+  3. $290.00, arrival 2026-11-19 08:51 UTC, SIMULATED_OPTION
+     MIA → NYC [ground] 11/18 04:51 → 11/19 08:51 UTC
+     Issues: SIMULATION_ONLY, WEATHER_ALERT_REVIEW
+Booking: NOT_ATTEMPTED
+Human review: Booking requires explicit user authorization
+NOTICE: Entire demo is fictional. No live airline availability, payment, or booking.
+
+--- SIMULATED SCENARIO STEP 2 ---
+
+============================================================================
+Travel Risk Research Agent | DEMO | Trip demo-4cf9cda9
+============================================================================
+MIA → NYC | Deadline UTC: 2026-11-20 03:51
+Risk classification: HIGH; State changed: True
+  Risk evidence: Weather-related concern: NYC: Synthetic winter storm warning near New York airports
+  Risk evidence: Confirmed in synthetic fixture: current flight canceled
+Actions:
+  • Risk state changed; initiate bounded ToT alternative planning
+  • Generated 3 validated or clearly labeled synthetic route options
+Evidence collected: 2; retrieval top results: 2
+  [SIMULATED demo feed] NYC | STORM_WARNING: Synthetic winter storm warning near New York airports | Fresh: True
+    https://example.invalid/synthetic-fixture
+  [SIMULATED demo feed] DEMO123 | FLIGHT_CANCELLED: Flight status: CANCELLED (synthetic) | Fresh: True
+    https://example.invalid/synthetic-fixture
+
+Alternative itineraries (SYNTHETIC prices/times, NOT bookable):
+  1. $365.00, arrival 2026-11-18 14:51 UTC, SIMULATED_OPTION
+     MIA → PHL [flight] 11/18 07:51 → 11/18 11:21 UTC
+     PHL → NYC [rail] 11/18 12:51 → 11/18 14:51 UTC
+     Issues: SIMULATION_ONLY, WEATHER_ALERT_REVIEW
+  2. $450.00, arrival 2026-11-18 13:51 UTC, SIMULATED_OPTION
+     MIA → ATL [flight] 11/18 05:51 → 11/18 08:06 UTC
+     ATL → NYC [flight] 11/18 10:51 → 11/18 13:51 UTC
+     Issues: SIMULATION_ONLY, WEATHER_ALERT_REVIEW
+  3. $290.00, arrival 2026-11-19 08:51 UTC, SIMULATED_OPTION
+     MIA → NYC [ground] 11/18 04:51 → 11/19 08:51 UTC
+     Issues: SIMULATION_ONLY, WEATHER_ALERT_REVIEW
+Booking: NOT_ATTEMPTED
+Human review: Booking requires explicit user authorization
+NOTICE: Entire demo is fictional. No live airline availability, payment, or booking.
+
+--- SIMULATED SCENARIO STEP 3 ---
+
+============================================================================
+Travel Risk Research Agent | DEMO | Trip demo-4cf9cda9
+============================================================================
+MIA → NYC | Deadline UTC: 2026-11-20 03:51
+Risk classification: HIGH; State changed: True
+  Risk evidence: Weather-related concern: NYC: Synthetic winter storm warning near New York airports
+  Risk evidence: Confirmed in synthetic fixture: current flight canceled
+  Risk evidence: MIA->NYC: Synthetic severe road closure on the direct ground route
+Actions:
+  • Risk state changed; initiate bounded ToT alternative planning
+  • Generated 2 validated or clearly labeled synthetic route options
+Evidence collected: 3; retrieval top results: 3
+  [SIMULATED demo feed] NYC | STORM_WARNING: Synthetic winter storm warning near New York airports | Fresh: True
+    https://example.invalid/synthetic-fixture
+  [SIMULATED demo feed] DEMO123 | FLIGHT_CANCELLED: Flight status: CANCELLED (synthetic) | Fresh: True
+    https://example.invalid/synthetic-fixture
+  [SIMULATED demo feed] MIA->NYC | GROUND_CLOSURE: Synthetic severe road closure on the direct ground route | Fresh: True
+    https://example.invalid/synthetic-fixture
+
+Alternative itineraries (SYNTHETIC prices/times, NOT bookable):
+  1. $365.00, arrival 2026-11-18 14:51 UTC, SIMULATED_OPTION
+     MIA → PHL [flight] 11/18 07:51 → 11/18 11:21 UTC
+     PHL → NYC [rail] 11/18 12:51 → 11/18 14:51 UTC
+     Issues: SIMULATION_ONLY, WEATHER_ALERT_REVIEW
+  2. $450.00, arrival 2026-11-18 13:51 UTC, SIMULATED_OPTION
+     MIA → ATL [flight] 11/18 05:51 → 11/18 08:06 UTC
+     ATL → NYC [flight] 11/18 10:51 → 11/18 13:51 UTC
+     Issues: SIMULATION_ONLY, WEATHER_ALERT_REVIEW
+Booking: NOT_ATTEMPTED
+Human review: Booking requires explicit user authorization
+NOTICE: Entire demo is fictional. No live airline availability, payment, or booking.
+
+--- SIMULATED SCENARIO STEP 4 ---
+
+============================================================================
+Travel Risk Research Agent | DEMO | Trip demo-4cf9cda9
+============================================================================
+MIA → NYC | Deadline UTC: 2026-11-20 03:51
+Risk classification: HIGH; State changed: True
+  Risk evidence: Confirmed in synthetic fixture: current flight canceled
+Actions:
+  • Risk state changed; initiate bounded ToT alternative planning
+  • Generated 3 validated or clearly labeled synthetic route options
+Evidence collected: 2; retrieval top results: 2
+  [SIMULATED demo feed] NYC | STORM_CLEARED: Simulated weather monitoring reports the prior warning has expired | Fresh: True
+    https://example.invalid/synthetic-fixture
+  [SIMULATED demo feed] DEMO123 | FLIGHT_CANCELLED: Flight status: CANCELLED (synthetic) | Fresh: True
+    https://example.invalid/synthetic-fixture
+
+Alternative itineraries (SYNTHETIC prices/times, NOT bookable):
+  1. $365.00, arrival 2026-11-18 14:51 UTC, SIMULATED_OPTION
+     MIA → PHL [flight] 11/18 07:51 → 11/18 11:21 UTC
+     PHL → NYC [rail] 11/18 12:51 → 11/18 14:51 UTC
+     Issues: SIMULATION_ONLY
+  2. $450.00, arrival 2026-11-18 13:51 UTC, SIMULATED_OPTION
+     MIA → ATL [flight] 11/18 05:51 → 11/18 08:06 UTC
+     ATL → NYC [flight] 11/18 10:51 → 11/18 13:51 UTC
+     Issues: SIMULATION_ONLY
+  3. $290.00, arrival 2026-11-19 08:51 UTC, SIMULATED_OPTION
+     MIA → NYC [ground] 11/18 04:51 → 11/19 08:51 UTC
+     Issues: SIMULATION_ONLY
+Booking: NOT_ATTEMPTED
+Human review: Booking requires explicit user authorization
+NOTICE: Entire demo is fictional. No live airline availability, payment, or booking.

@@ -1,0 +1,23 @@
+[project]
+name = "travel-risk-agent"
+version = "0.1.0"
+description = "Safety-first agentic travel disruption planning research MVP"
+requires-python = ">=3.10"
+dependencies = ["requests>=2.31,<3", "scikit-learn>=1.3,<2"]
+
+[project.optional-dependencies]
+semantic = ["sentence-transformers>=3,<6"]
+
+[project.scripts]
+travel-risk-agent = "travel_agent.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["travel_agent*"]

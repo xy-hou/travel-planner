@@ -1,0 +1,10 @@
+{
+  "trip_id": "example-mia-nyc",
+  "origin": "MIA",
+  "destination": "NYC",
+  "deadline": "2026-12-01T20:00:00-05:00",
+  "budget_usd": 700,
+  "flight_number": "DEMO123",
+  "auto_booking_authorized": false,
+  "auto_booking_limit_usd": 0
+}
